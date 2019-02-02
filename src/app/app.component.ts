@@ -8,14 +8,17 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-   title = 'intro2angular';
-   myDisabled = false
-   myVariable = "app"
-   constructor(){
-     setInterval(()=>{
-     this.myVariable = Math.random().toString()
-     this.myDisabled = Math.random() < 0.5
-     },500)
-   }
+  title = 'intro2angular';
+  myDisabled = false
+  myVariable = "app"
 
+  constructor() {
+    this.myDisabled
+    this.myVariable
+  }
+
+  callMyFunc() {
+    console.log("Called Succesfully!!!")
+    this.myDisabled = !this.myDisabled
+  }
 }
