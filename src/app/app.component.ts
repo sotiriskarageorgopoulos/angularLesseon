@@ -16,10 +16,4 @@ export class AppComponent {
     
   }
 
-  updateValue(event)
-  {
-    console.log(event.target.value)
-    this.myVariable = event.target.value
-  }
-
 }
