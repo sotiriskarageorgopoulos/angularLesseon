@@ -1,3 +1,2 @@
-<input type="text" [value]="myVariable" [disabled]="myDisabled"> <!-- source to target -> [] -->
-<br>
-<button (click)=" callMyFunc()">Hey!!!</button>
+<input type="text" [value]="myVariable" (input)="updateValue($event)"> <!--Two-ways Data Binding I-->
+{{myVariable}}

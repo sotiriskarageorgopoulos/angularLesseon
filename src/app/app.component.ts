@@ -13,12 +13,13 @@ export class AppComponent {
   myVariable = "app"
 
   constructor() {
-    this.myDisabled
-    this.myVariable
+    
   }
 
-  callMyFunc() {
-    console.log("Called Succesfully!!!")
-    this.myDisabled = !this.myDisabled
+  updateValue(event)
+  {
+    console.log(event.target.value)
+    this.myVariable = event.target.value
   }
+
 }
