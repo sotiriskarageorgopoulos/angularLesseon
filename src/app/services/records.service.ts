@@ -1,27 +1,14 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+ 
 @Injectable({
   providedIn: 'root'
 })
 export class RecordsService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getData(){ //return the array with data
-    return  [
-      {
-        name:"Sotiris",
-        online:true
-      },
-      {
-        name:"George",
-        online:false
-      }
-      ,
-      {
-        name:"Natassa",
-        online:true
-      }
-    ]
+  getData(){ //return the data which contains db.json 
+    return  this.http.get('http://localhost:3000/person')
   }
 }

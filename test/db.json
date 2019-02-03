@@ -1,0 +1,15 @@
+{
+  "person": [{
+      "name": "Sotiris",
+      "online": true
+    },
+    {
+      "name": "George",
+      "online": false
+    },
+    {
+      "name": "Natassa",
+      "online": true
+    }
+  ]
+}

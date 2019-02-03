@@ -7,13 +7,19 @@ import { RecordsService } from './services/records.service';
   styleUrls: ['./app.component.css']
 })
 
+
 export class AppComponent {
   title = 'intro2angular';
 
-  records = {} //create an array of records
+  records = {} //create an object of records
 
-  constructor(private myService:RecordsService) { //create an object of RecordsService
-    this.records = this.myService.getData() //store the data to records
+  constructor(private myService:RecordsService) {}//create an object of RecordsService
+  
+ 
+  ngOnInit()
+  {
+     this.myService.getData().subscribe(data => { //subscribe is used to store data on object records, through getData()
+      this.records = data
+    }) 
   }
-
 }
