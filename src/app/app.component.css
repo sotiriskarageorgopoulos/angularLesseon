@@ -1,0 +1,15 @@
+tr.even{
+    background-color: yellow;
+}
+
+tr.odd{
+    background-color: red;
+}
+
+tr.first{
+    color:blueviolet;
+}
+
+tr.last{
+    color:blue;
+}

@@ -9,9 +9,22 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'intro2angular';
-  myDisabled = false
-  myVariable = "app"
-
+ 
+  data = [
+  {
+    name:"Sotiris",
+    online:true
+  },
+  {
+    name:"George",
+    online:false
+  }
+  ,
+  {
+    name:"Natassa",
+    online:true
+  }
+]
   constructor() {
     
   }
