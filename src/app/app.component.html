@@ -4,7 +4,8 @@
     <td>IsOnline</td>
     <td>Serial Number</td>
   </tr>
-  <tr *ngFor="let d of data; let i=index; let evenData = even; let oddData=odd; let firstRecord = first; let lastRecord = last;" [ngClass]="{even:evenData , odd:oddData, last:lastRecord, first:firstRecord}">
+  <!-- we use the array records to iterate the data-->
+  <tr *ngFor="let d of records; let i=index; let evenData = even; let oddData=odd; let firstRecord = first; let lastRecord = last;" [ngClass]="{even:evenData , odd:oddData, last:lastRecord, first:firstRecord}">
       <td>{{d.name}}</td>
       <td>{{d.online}}</td>
       <td>{{i}}</td>

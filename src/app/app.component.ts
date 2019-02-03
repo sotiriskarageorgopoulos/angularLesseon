@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { RecordsService } from './services/records.service';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +9,11 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'intro2angular';
- 
-  data = [
-  {
-    name:"Sotiris",
-    online:true
-  },
-  {
-    name:"George",
-    online:false
-  }
-  ,
-  {
-    name:"Natassa",
-    online:true
-  }
-]
-  constructor() {
-    
+
+  records = {} //create an array of records
+
+  constructor(private myService:RecordsService) { //create an object of RecordsService
+    this.records = this.myService.getData() //store the data to records
   }
 
 }
